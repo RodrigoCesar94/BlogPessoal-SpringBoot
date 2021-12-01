@@ -32,6 +32,16 @@ public class Postagem {
 	@Size(min = 10, max = 100, message="O Atributo titulo deve conter no minimo 10 caracteres")
 	private String titulo;
 	
+
+	@NotNull
+	@Size(min = 10, max = 1000, message="O Atributo  texto deve conter no minimo 10 caracteres")
+	private String texto;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date data = new java.sql.Date(System.currentTimeMillis());
+	/* quando uma dado passar por este objeto será capturadfo data
+	 hora e milisegundos dessa interação.*/
+	
 	
 	public long getId() {
 		return id;
@@ -65,14 +75,6 @@ public class Postagem {
 		this.data = data;
 	}
 
-	@NotNull
-	@Size(min = 10, max = 1000, message="O Atributo  texto deve conter no minimo 10 caracteres")
-	private String texto;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date data = new java.sql.Date(System.currentTimeMillis());
-	/* quando uma dado passar por este objeto será capturadfo data
-	 hora e milisegundos dessa interação.*/
 	
 }
 
