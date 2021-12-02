@@ -10,14 +10,14 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size; // chamado na notação Size
+import javax.validation.constraints.Size; // chamando na notação Size
 
 
 
 /* para que esta classe possa ser interprestada pelo banco de dados será 
 necessário inserir anotações, que estão ao longo do programa. com essa anotações(notations)
  o JPA hibernate conseguirá interpretar essa classe como uma entidade. para isso as anotações a serem usadas são
- @Entity que importa de javax.peristence e @Table que importa de java.persistence ficando como na linha 6 */
+ @Entity que importa de javax.peristence e @Table que importa de java.persistence ficando como na linha 22 e 23 */
 
 @Entity  // biblioteca javax.persistence
 @Table(name = "tb_postagem") // biblioteca javax.peristence
@@ -28,7 +28,7 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // aqui você determina que ele é a chave primária através da estratégia IDENTITY e também fazendo que ele faça o auto_increment
 	private long id;
 	
-	@NotNull// notação para que o dados que passe por aqui não seja nulo
+	@NotNull// notação para que o dados que passe por aqui não sejam nulos
 	@Size(min = 10, max = 100, message="O Atributo titulo deve conter no minimo 10 caracteres")
 	private String titulo;
 	
