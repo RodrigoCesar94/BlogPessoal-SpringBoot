@@ -6,12 +6,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size; // chamando na notação Size
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties; // chamando na notação Size
 
 
 
@@ -42,6 +45,11 @@ public class Postagem {
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	/* quando uma dado passar por este objeto será capturadfo data
 	 hora e milisegundos dessa interação.*/
+	
+	@ManyToOne // Aqui vc não rretonra uma lista pois é de ManytoOne, ou seja, apenas um resultado
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
+	
 	
 	
 	public long getId() {
