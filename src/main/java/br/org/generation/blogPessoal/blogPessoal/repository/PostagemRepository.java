@@ -13,9 +13,13 @@ import br.org.generation.blogPessoal.blogPessoal.Model.Postagem; // no diamante 
 // <Postagem, Long>
 
 
-@Repository
+@Repository //responsável pela comunicação com o banco de dados usando mpedotdos padrão peronslizados. 
+
+
+
 public interface PostagemRepository extends JpaRepository <Postagem, Long> // herdando interface JpaRepository
 {
-	public List<Postagem> findAllByTituloContainingIgnoreCase(String titulo);			
+	//equivalente ao SELECT*FROM tb_postagem where titulo like ||| IgnoreCase é para não diferenciar maiusculkas de minusculas.
+	public List<Postagem> findAllByTituloContainingIgnoreCase(String titulo);
 
 }

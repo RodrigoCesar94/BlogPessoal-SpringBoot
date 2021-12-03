@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size; // chamando na notação Size
 
@@ -28,12 +29,12 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // aqui você determina que ele é a chave primária através da estratégia IDENTITY e também fazendo que ele faça o auto_increment
 	private long id;
 	
-	@NotNull// notação para que o dados que passe por aqui não sejam nulos
+	@NotBlank(message = "O atributo título é obrigatório e não pode conter espaços vazios") //O @NotBlank não aceita espaços vazios, 
 	@Size(min = 10, max = 100, message="O Atributo titulo deve conter no minimo 10 caracteres")
 	private String titulo;
 	
 
-	@NotNull
+	@NotNull(message = "O Atibuto texto é obrigatório") 
 	@Size(min = 10, max = 1000, message="O Atributo  texto deve conter no minimo 10 caracteres")
 	private String texto;
 	
@@ -77,14 +78,3 @@ public class Postagem {
 
 	
 }
-
-
-
-
-
- 
-	
-	
-
-
-
