@@ -28,6 +28,14 @@ necessário inserir anotações, que estão ao longo do programa. com essa anota
 
 public class Postagem {
 	
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // aqui você determina que ele é a chave primária através da estratégia IDENTITY e também fazendo que ele faça o auto_increment
 	private long id;

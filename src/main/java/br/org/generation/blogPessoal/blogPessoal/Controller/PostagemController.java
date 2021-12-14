@@ -23,7 +23,7 @@ import br.org.generation.blogPessoal.blogPessoal.repository.PostagemRepository;
 
 
 @CrossOrigin(origins = "*",allowedHeaders = "*")
-// essa sinal de *colocado em entre aspas duplas define que nossa classe pode
+// essa sinal de * colocado em entre aspas duplas define que nossa classe pode
 					// ser acessada por qualquer origem o allowedHeaders aumenta este acesso para todos. 
 
 public class PostagemController {
