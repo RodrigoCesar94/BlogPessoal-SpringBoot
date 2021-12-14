@@ -1,7 +1,15 @@
 package br.org.generation.blogPessoal.blogPessoal.Model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class UserLogin {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	
 	private String nome;
 
 	private String usuario;
@@ -40,6 +48,14 @@ public class UserLogin {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 }
