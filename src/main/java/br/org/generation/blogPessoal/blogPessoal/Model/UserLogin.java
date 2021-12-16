@@ -17,6 +17,16 @@ public class UserLogin {
 	private String senha;
 
 	private String token;
+	
+	private String foto;
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 
 	public String getNome() {
 		return nome;
