@@ -18,10 +18,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties; // chamando na not
 
 
 
-/* para que esta classe possa ser interprestada pelo banco de dados será 
-necessário inserir anotações, que estão ao longo do programa. com essa anotações(notations)
+/* para que esta classe possa ser interpretada pelo banco de dados será 
+necessário inserir anotações, que estão ao longo do programa. com essas @anotações 
  o JPA hibernate conseguirá interpretar essa classe como uma entidade. para isso as anotações a serem usadas são
- @Entity que importa de javax.peristence e @Table que importa de java.persistence ficando como na linha 22 e 23 */
+ @Entity que importa de javax.peristence e @Table que importa de java.persistence */
 
 @Entity  // biblioteca javax.persistence
 @Table(name = "tb_postagem") // biblioteca javax.peristence
