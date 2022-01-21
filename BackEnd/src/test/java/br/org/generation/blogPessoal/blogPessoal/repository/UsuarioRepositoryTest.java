@@ -29,15 +29,7 @@ public class UsuarioRepositoryTest {
 		@BeforeAll
 		void start(){
 
-			//adicionado null pois há o atributo foto na Model Usuario. Sem isso, fica com erro. ?
-			usuarioRepository.save(new Usuario(0L, "João da Silva", "joao@email.com.br", "13465278", null));
 			
-			usuarioRepository.save(new Usuario(0L, "Manuela da Silva", "manuela@email.com.br", "13465278", null));
-			
-			usuarioRepository.save(new Usuario(0L, "Manuela da Silva", "manuela@email.com.br", "13465278", null));
-			
-			usuarioRepository.save(new Usuario(0L, "Manuela da Silva", "manuela@email.com.br", "13465278", null));
-
 		}
 
 		@Test
