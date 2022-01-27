@@ -28,7 +28,6 @@ public class UsuarioService {
         return Optional.of(repository.save(usuario));
     }
 	
-	//Fazer igual do costa senão vai dar erro no JUnit 
 	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
 
 
@@ -42,7 +41,7 @@ public class UsuarioService {
 
         return Optional.empty();
 
-    } // verificar código Yasmim caso 401 no postman para entrar com usuário. 
+    }
 	public Optional<UserLogin> autenticarUsuario(Optional<UserLogin> userLogin) {
 
         Optional<Usuario> usuario = repository.findByUsuario(userLogin.get().getUsuario());

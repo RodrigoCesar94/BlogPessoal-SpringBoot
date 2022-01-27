@@ -29,13 +29,7 @@ public class Tema {
 		this.id = id;
 	}
 
-	public String getDescrição() {
-		return descrição;
-	}
-
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
-	}
+	
 
 	public List<Postagem> getPostagem() {
 		return postagem;
@@ -46,7 +40,7 @@ public class Tema {
 	}
 
 	@NotBlank(message = "O atributo descrição não pode estar vazio")
-	private String descrição;
+	private String descricao;
 
 	// criando uma lista do objeto <Postagem> puxando da model postagem
 	@OneToMany(mappedBy = "tema") // referencia o tema como sendo o One dessa relação. Você deve se referenciar
