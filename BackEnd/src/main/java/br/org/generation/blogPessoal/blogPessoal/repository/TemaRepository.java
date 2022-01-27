@@ -12,6 +12,6 @@ public interface TemaRepository extends JpaRepository<Tema, Long> // Estabelece 
 																	// métodos de JpaRepository
 {
 
-	public List<Tema> findAllByDescriçãoContainingIgnoreCase(String descrição);
+	public List<Tema> findAllByDescricaoContainingIgnoreCase(String descrição);
 
 }
